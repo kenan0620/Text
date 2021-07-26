@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		27BF484926AE4DE00060D910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BF484826AE4DE00060D910 /* AppDelegate.m */; };
-		27BF484C26AE4DE00060D910 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BF484B26AE4DE00060D910 /* SceneDelegate.m */; };
 		27BF484F26AE4DE00060D910 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BF484E26AE4DE00060D910 /* ViewController.m */; };
 		27BF485226AE4DE00060D910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BF485026AE4DE00060D910 /* Main.storyboard */; };
 		27BF485426AE4DE80060D910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BF485326AE4DE80060D910 /* Assets.xcassets */; };
@@ -20,8 +19,6 @@
 		27BF484426AE4DE00060D910 /* Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Text.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BF484726AE4DE00060D910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27BF484826AE4DE00060D910 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27BF484A26AE4DE00060D910 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		27BF484B26AE4DE00060D910 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		27BF484D26AE4DE00060D910 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		27BF484E26AE4DE00060D910 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		27BF485126AE4DE00060D910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,8 +60,6 @@
 			children = (
 				27BF484726AE4DE00060D910 /* AppDelegate.h */,
 				27BF484826AE4DE00060D910 /* AppDelegate.m */,
-				27BF484A26AE4DE00060D910 /* SceneDelegate.h */,
-				27BF484B26AE4DE00060D910 /* SceneDelegate.m */,
 				27BF484D26AE4DE00060D910 /* ViewController.h */,
 				27BF484E26AE4DE00060D910 /* ViewController.m */,
 				27BF485026AE4DE00060D910 /* Main.storyboard */,
@@ -148,7 +143,6 @@
 				27BF484F26AE4DE00060D910 /* ViewController.m in Sources */,
 				27BF484926AE4DE00060D910 /* AppDelegate.m in Sources */,
 				27BF485A26AE4DE80060D910 /* main.m in Sources */,
-				27BF484C26AE4DE00060D910 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,6 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X86L5A5P2C;
 				INFOPLIST_FILE = Text/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X86L5A5P2C;
 				INFOPLIST_FILE = Text/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
