@@ -13,6 +13,7 @@
 		27BF485426AE4DE80060D910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BF485326AE4DE80060D910 /* Assets.xcassets */; };
 		27BF485726AE4DE80060D910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BF485526AE4DE80060D910 /* LaunchScreen.storyboard */; };
 		27BF485A26AE4DE80060D910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BF485926AE4DE80060D910 /* main.m */; };
+		27BF488126AE8EA00060D910 /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BF488026AE8EA00060D910 /* NSString+Regular.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		27BF485626AE4DE80060D910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27BF485826AE4DE80060D910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27BF485926AE4DE80060D910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27BF487F26AE8EA00060D910 /* NSString+Regular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
+		27BF488026AE8EA00060D910 /* NSString+Regular.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regular.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				27BF484826AE4DE00060D910 /* AppDelegate.m */,
 				27BF484D26AE4DE00060D910 /* ViewController.h */,
 				27BF484E26AE4DE00060D910 /* ViewController.m */,
+				27BF487F26AE8EA00060D910 /* NSString+Regular.h */,
+				27BF488026AE8EA00060D910 /* NSString+Regular.m */,
 				27BF485026AE4DE00060D910 /* Main.storyboard */,
 				27BF485326AE4DE80060D910 /* Assets.xcassets */,
 				27BF485526AE4DE80060D910 /* LaunchScreen.storyboard */,
@@ -142,6 +147,7 @@
 			files = (
 				27BF484F26AE4DE00060D910 /* ViewController.m in Sources */,
 				27BF484926AE4DE00060D910 /* AppDelegate.m in Sources */,
+				27BF488126AE8EA00060D910 /* NSString+Regular.m in Sources */,
 				27BF485A26AE4DE80060D910 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
