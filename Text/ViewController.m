@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<UITextViewDelegate>
+@interface ViewController ()<UITextViewDelegate, UITextFieldDelegate>
 @property (nonatomic, strong) UITextView *textView;
 
 @property (nonatomic, strong) UITextView *textView1;
@@ -24,69 +24,32 @@
     
     [self.view addSubview:self.textView];
     [self.view addSubview:self.textView1];
-
+    
 }
 
 #pragma mark - UITextViewDelegate
 
-
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
-    return  true;
-}
-- (BOOL)textViewShouldEndEditing:(UITextView *)textView{
-    return  true;
-    
-}
-
-- (void)textViewDidBeginEditing:(UITextView *)textView{
-    
-}
-- (void)textViewDidEndEditing:(UITextView *)textView{
-    
-}
-
-
-
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-    if (textView == self.textView1){
-        return  true;
-    }
-//    NSLog(@"1-- text:%@; range:%ld, %ld",text,range.location,range.length);
-    BOOL isMap = [self isEmojiMap:text];
-    if (isMap) {
-        return false;
-    }
-//    NSLog(@"正则结果是:%@",result? @"true": @"false");
-        NSString *uniStr = [NSString stringWithUTF8String:[text UTF8String]];
-        NSData *uniData = [uniStr dataUsingEncoding:NSNonLossyASCIIStringEncoding];
-        NSString *emojiText = [[NSString alloc] initWithData:uniData encoding:NSUTF8StringEncoding];
-        NSLog(@"text: %@,emojiText:%@",text,emojiText);
-    return  true;
     
-}
-- (void)textViewDidChange:(UITextView *)textView{
+    NSLog(@"1-- text:%@; range:%ld, %ld",text,range.location,range.length);
     
-}
-
-- (void)textViewDidChangeSelection:(UITextView *)textView{
-//    NSLog(@"2-- textView.text:%@;",textView.text);
-
-}
-
-- (BOOL)isEmojiMap:(NSString *)string{
-    NSString *uniStr = [NSString stringWithUTF8String:[string UTF8String]];
+    NSString *uniStr = [NSString stringWithUTF8String:[text UTF8String]];
     NSData *uniData = [uniStr dataUsingEncoding:NSNonLossyASCIIStringEncoding];
     NSString *emojiText = [[NSString alloc] initWithData:uniData encoding:NSUTF8StringEncoding];
-     BOOL result = [emojiText hasPrefix:@"\\u23"] ||
-    [emojiText hasPrefix:@"\\u26"] ||
-    [emojiText hasPrefix:@"\\u27"] ||
-    [emojiText hasPrefix:@"\\u32"] ||
-    [emojiText hasPrefix:@"\\ud83c"]||
-    [emojiText hasPrefix:@"\\ud83d"] ||
-    [emojiText hasPrefix:@"\\ud83e"] ||
-    [emojiText containsString:@"\\ufe0f"];
+    NSLog(@"text: %@,emojiText:%@",text,emojiText);
+    if (![self inputIsValid:text]) {
+        return false;
+    }
+    return  true;
     
-    return result;
+}
+
+
+- (BOOL)inputIsValid:(NSString *)string{
+    NSString *regex = @"[0-9a-zA-Z\u4e00-\u9fa5\\.\\*\\)\\(\\+\\$\\[\\?\\\\\\^\\{\\|\\]\\}%%%@\'\",。‘、-【】·！_——=:;；<>《》‘’“”!#~]+";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isMatch = [pred evaluateWithObject:string];
+    return  isMatch;
 }
 
 #pragma mark - UILzay

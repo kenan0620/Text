@@ -8,19 +8,11 @@
 #import "NSString+Regular.h"
 
 @implementation NSString (Regular)
-- (BOOL)hasEmoji{
-    NSString *uniStr = [NSString stringWithUTF8String:[self UTF8String]];
-    NSData *uniData = [uniStr dataUsingEncoding:NSNonLossyASCIIStringEncoding];
-    NSString *emojiText = [[NSString alloc] initWithData:uniData encoding:NSUTF8StringEncoding];
-    BOOL result = [emojiText hasPrefix:@"\\u23"] ||
-    [emojiText hasPrefix:@"\\u26"] ||
-    [emojiText hasPrefix:@"\\u27"] ||
-    [emojiText hasPrefix:@"\\u32"] ||
-    [emojiText hasPrefix:@"\\ud83c"]||
-    [emojiText hasPrefix:@"\\ud83d"] ||
-    [emojiText hasPrefix:@"\\ud83e"] ||
-    [emojiText containsString:@"\\ufe0f"];
-    
-    return result;
+
+- (BOOL)inputIsValid{
+    NSString *regex = @"[0-9a-zA-Z\u4e00-\u9fa5\\.\\*\\)\\(\\+\\$\\[\\?\\\\\\^\\{\\|\\]\\}%%%@\'\",。‘、-【】·！_——=:;；<>《》‘’“”!#~]+";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isMatch = [pred evaluateWithObject:self];
+    return  isMatch;
 }
 @end

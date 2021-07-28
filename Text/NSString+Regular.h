@@ -11,9 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Regular)
 /**
- 是否包含表情
+ 输入是否有效
+ 
+ 有效内容为:中文、数字、字母、常用符号
  */
-- (BOOL)hasEmoji;
+- (BOOL)inputIsValid;
 @end
 
 NS_ASSUME_NONNULL_END
